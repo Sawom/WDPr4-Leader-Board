@@ -4,6 +4,8 @@ header{
     color: whitesmoke;
     margin: 0px;
     margin-bottom: 30px;
+    justify-content: center;
+    align-items: center;
 }
 
 body{
@@ -31,11 +33,11 @@ main{
 }
 
 .shift{
-    margin-right: 16px ;
+    margin-right: 14px ;
 }
 
 h2{
-    margin-right: 16px;
+    margin-right: 14px;
 }
 
 .one{
@@ -151,14 +153,6 @@ hr{
     font-size: 14px;
 }
 
-footer{
-    margin-top: 40px;
-    background-color: #562EFF;
-    color: whitesmoke;
-    justify-content: center;
-    align-items: center;
-}
-
 .bg{
     padding: 25px;
 }
@@ -168,4 +162,45 @@ footer{
     color: whitesmoke;
     padding: 6px;
     border-radius: 10px;
+}
+
+footer{
+    margin-top: 40px;
+    background-color: #562EFF;
+    color: whitesmoke;
+    justify-content: center;
+    align-items: center;
+}
+
+/* phone */
+@media only screen and (max-width:688px) {
+    header {
+        width: 100%;
+    }
+    .conteiner{
+        width: 100%;
+    }
+    .single-player, .single-course , .single-blog{
+        flex-direction: column;
+    }
+    .many-blog, .many-course{
+        grid-template-columns: repeat(1,1fr);
+    }
+    
+}
+
+/* tablet */
+@media only screen and (min-width:688px) and (max-width:992px){
+    header{
+        width: 120%;
+    }
+    .conteiner{
+        width: 100%;
+    }
+    .single-player, .single-course , .single-blog{
+        flex-direction: column;
+    }
+    .many-blog, .many-course{
+        grid-template-columns: repeat(2,1fr);
+    }
 }
